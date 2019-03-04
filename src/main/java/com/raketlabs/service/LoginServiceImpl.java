@@ -31,7 +31,7 @@ public class LoginServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 		Optional<UserInfo> userInfo = loginDao.findUserInfo(userName);
 
-		if (userInfo.isEmpty()) {
+		if (!userInfo.isPresent()) {
 			throw new UsernameNotFoundException("username was not found in the database");
 		}
 
