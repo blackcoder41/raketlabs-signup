@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: header">
+</head>
+<body>
+<div id="wrapper">
+
+<div class="alert alert-success" role="alert" th:if="${success}" th:text="${success}"></div>
+<div class="alert alert-danger" role="alert" th:if="${error}" th:text="${error}"></div>
+
+<h2 th:text ="'Hello ' + ${authentication.getName() + '! Welcome to Raket Labs Software'}">Welcome to Raket Labs Software</h2>
+
+<p ></p>
+
+<a href="" th:href="@{/user/list}" class="btn btn-primary" role="button">View list of users</a>
+
+<a href="" th:href="@{/logout}" class="btn btn-outline-secondary" role="button">Log out</a>
+
+</div><!-- #wrapper -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: header">
+</head>
+<body>
+<div id="wrapper">
+
+<div class="alert alert-success" role="alert" th:if="${success}" th:text="${success}"></div>
+<div class="alert alert-danger" role="alert" th:if="${error}" th:text="${error}"></div>
+
+<div id="login-panel" class="panel panel-default">
+<form th:action="@{/login}" method="post">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+  </div>
+  <div class="form-check form-group">
+    <input type="checkbox" class="form-check-input" id="remember-me" name="remember-me" placeholder="Keep you signed-in">
+    <label for="remember-me" class="form-check-label">Remember me</label>    
+  </div>
+  <button type="submit" class="btn btn-primary">Log in</button>
+  <a class="btn btn-outline-secondary" th:href="@{/user/signup}" role="button">Sign up</a>
+</form>
+</div>
+
+</div><!-- #wrapper -->
+</body>
+</html>

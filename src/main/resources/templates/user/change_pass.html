@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: header">
+</head>
+<body>
+<div id="wrapper">
+
+
+<div id="login-panel" class="panel panel-default">
+<form th:action="@{/user/save}" method="post" th:object="${user}" name="user">
+
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" th:value="${user.userName}" th:field="*{userName}">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" th:field="*{password}">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Change Password</button>
+</form>
+</div>
+
+</div><!-- #wrapper -->
+</body>
+</html>
