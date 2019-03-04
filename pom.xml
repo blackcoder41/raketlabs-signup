@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.raketlabs</groupId>
-	<artifactId>raketlabs</artifactId>
+	<artifactId>raketlabs-signup</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>raketlabs</name>
 	<description>Sign up and login</description>
